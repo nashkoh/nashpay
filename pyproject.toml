@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nashpay"
+dynamic = ["version"]
+description = "Nash Pay — выплаты, чеки и приём оплаты в GRAM и USDT в Telegram-ботах через @Nashkoh_bot"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Nash Koh" }]
+dependencies = ["aiohttp>=3.8"]
+keywords = ["telegram", "bot", "crypto", "payments", "usdt", "ton", "gram", "aiogram", "nash pay", "nashkoh"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Framework :: AsyncIO",
+    "Topic :: Office/Business :: Financial",
+    "Natural Language :: Russian",
+]
+
+[project.urls]
+"Бот" = "https://t.me/Nashkoh_bot"
+"Сайт" = "https://nashkoh.github.io"
+"Канал" = "https://t.me/NashKoh_Chanel"
+
+[tool.setuptools]
+py-modules = ["nashpay"]
+
+[tool.setuptools.dynamic]
+version = { attr = "nashpay.__version__" }
